@@ -1,14 +1,14 @@
-// import moment from "moment";
+var clock = document.getElementById("clock");
 
-// document.getElementById("current-time").innerHTML =
-//     ${moment().format('LTS')};
+function updateTime() { 
+    var timeNow = moment();
+    var timeReadable = timeNow.format("hh:mm:ssA")
 
-// import moment from "moment";
+    clock.textContent = timeReadable;
+}
 
-// setInterval(() => {
-//     document.getElementById("current-time").innerHTML =
-//         ${moment().format('LTS')};
-// }, 1000);
+setInterval(updateTime, 1000);
+updateTime()
 
 
 $(document).ready(function() {
